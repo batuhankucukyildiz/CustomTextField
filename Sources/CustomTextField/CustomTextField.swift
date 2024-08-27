@@ -75,7 +75,7 @@ public struct CustomTextField: View {
         VStack(spacing: 8){
             //Title
             if let titleText{
-                Text(titleText)
+                Text(LocalizedStringKey(titleText))
                     .font(titleFont)
                     .foregroundColor(getTitleTextColor())
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -85,7 +85,7 @@ public struct CustomTextField: View {
                 HStack(spacing: 0){
                     secureAnyView()
                         .placeholder(when: text.wrappedValue.isEmpty, placeholder: {
-                            Text(placeHolderText)
+                            Text(LocalizedStringKey(placeHolderText))
                                 .foregroundColor(getPlaceHolderTextColor())
                                 .font(placeHolderFont)
                         })
